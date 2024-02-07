@@ -1,66 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Ash.</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <span>Ash.</span>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Producto</a>
-          </li>
-          <li>
-            <a href="#">¿Qué somos?</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <span>Salvavidas</span>
-        <h1>Más que una herramienta</h1>
-        <p>
-          Buscamos aporte verdadero y fresco para tu vida academica mediante
-          soluciones de confianza que te permitan entender las ciencias que nos
-          rodean.
+
+<head>
+  <title>Ash.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/7615a1371a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <span>CALC.</span>
+    <nav>
+      <ul>
+        <li>
+          <a href="#home"><i class="fa-solid fa-house"></i> Inicio</a>
+        </li>
+        <li>
+          <a href="#product"><i class="fa-solid fa-feather"></i> Producto</a>
+        </li>
+        <li>
+          <a href="#who"><i class="fa-solid fa-tree"></i> ¿Qué somos?</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article id="#home">
+      <span class="subtitle">Más fácil de lo que crees</span>
+      <h1 class="title">Más que una herramienta</h1>
+      <p class="paragraph">
+        Gracias a las ciencias como lo son la física, nuestro entorno toma un enfoque amplio e incluso algo mágico, nos
+        permiten conocer el porque de las obras de Dios y la naturaleza.
+        <br>
+        Por eso creamos una calculadora capaz de explicarte transformaciones básicas de unidades y el manejo de ondas
+        sinusoidales.
+      </p>
+      <div class="buttons">
+        <a class="btn btn--black" href="#who">Contacto</a>
+        <a class="btn btn--white" href="#product">Pruebala</a>
+      </div>
+    </article>
+    <figure>
+      <img src="/src/img.jpeg" alt="Fotografía sobre nuestro proyecto de Física." />
+    </figure>
+  </main>
+  <section class="who">
+    <h2 class="title">¿Para que sirven las ondas sinusoidales?</h2>
+
+    <article id="#who">
+
+      <div class="container">
+
+        <span class="title">En la matemática y en la física</span>
+        <p>Son importantes porque son un tipo de onda periódica fundamental que se utiliza para modelar una amplia
+          variedad de fenómenos naturales y artificiales.</p>
+
+      </div>
+
+      <div class="container">
+
+        <span class="title">En la electronica y telecomunicaciones</span>
+        <p>Son fundamentales en electrónica y telecomunicaciones porque se utilizan en la
+          generación, transmisión y procesamiento de señales eléctricas, como las señales de audio, video y datos.
         </p>
-        <div class="buttons">
-          <a class="btn btn--black" href="#">Contacto</a>
-          <a class="btn btn--white" href="#">Comienza</a>
-        </div>
-      </article>
-      <figure>
-        <img src="https://i.imgur.com/m2lndSF.png" alt="Logo de Wave." />
-      </figure>
-    </main>
-    <section class="calc">
-      <article>
-        <h2>Proyecto calculadora de ondas mecanicas</h2>
-        <span>Elija el tipo de onda que quiera operar</span>
-        <div>
-          <button class="btn btn--black">Longitud de onda</button>
-          <button class="btn btn--black">Frecuencia de onda</button>
-          <button class="btn btn--black">Velocidad de onda</button>
-          <button class="btn btn--black">Tiempo de onda</button>
-        </div>
-      </article>
-    </section>
-    <section class="stats">
-      <span>Intentamos ser:</span>
-      <article>
-        <strong>CREATIVOS</strong>
-        <strong>INGENIOSOS</strong>
-        <strong>INNOVADORES</strong>
-      </article>
-    </section>
-  </body>
-  <script src="app.js"></script>
+
+      </div>
+
+      <div class="container">
+
+        <span class="title">En la transmición de señales</span>
+        <p>Son utilizadas debido a su capacidad para transportar información de manera eficiente y ser fácilmente
+          manipuladas mediante técnicas de modulación.</p>
+
+      </div>
+
+    </article>
+  </section>
+  <section id="#product" class="calc">
+    <article>
+      <h2 class="title">Calculadora de ondas mecanicas</h2>
+      <span class="paragraph">Elija el tipo de operación que quiera realizar</span>
+    </article>
+    <select>
+      <option value="onda-lon" a="Velocidad (m/s)" b="Frecuencia (hz)">
+        Longitud de Onda (mts)
+      </option>
+      <option value="onda-vel" a="Longitud (mts)" b="Frecuencia (hz)">
+        Velocidad de Onda (mts/seg)
+      </option>
+      <option value="onda-fre" a="Velocidad (m/s)" b="Longitud (mts)">
+        Frecuencia de Onda (hz)
+      </option>
+      <option value="km-m" a="Kilometros (km)" b="0">
+        Kilometros a metros
+      </option>
+      <option value="cm-m" a="Centimetros (cm)" b="0">
+        Centimetros a metros
+      </option>
+      <option value="min-seg" a="Minutos (min)" b="0">
+        Minutos a segundos
+      </option>
+      <option value="h-seg" a="Horas (h)" b="0">Horas a segundos</option>
+    </select>
+    <form>
+      <div class="input">
+        <label for="1" id="inputA">Elija una operación</label>
+        <input type="text" id="1" placeholder="Ej: 01234" required />
+      </div>
+      <div class="input">
+        <label for="2" id="inputB">Elija una operación</label>
+        <input type="text" id="2" placeholder="Ej: 01234" required />
+      </div>
+      <span class="calc-result hidden">Resultado:</span>
+      <button class="btn btn--white">Resolver</button>
+    </form>
+  </section>
+  <footer>
+    <strong>Copyright 2024 - Todos los derechos reservados.</strong>
+  </footer>
+</body>
+<script src="app.js"></script>
+
 </html>

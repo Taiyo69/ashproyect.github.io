@@ -12,11 +12,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 body {
   min-height: 100vh;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background-color: var(--light-gray);
   color: white;
   padding: 0 2em;
@@ -56,18 +56,24 @@ ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
+}
+
+ul li a {
+  text-align: center;
 }
 
 ul li a:hover {
   border-bottom: 2px solid white;
+  transition: border-bottom 1s ease;
 }
 
 main {
   overflow: hidden;
   display: grid;
   grid-template-areas: 'article img';
-  min-height: 50vh;
+  min-height: 43vh;
+  padding: 2em;
 }
 
 main article {
@@ -81,6 +87,10 @@ main article {
 
 h1 {
   font-size: 30px;
+}
+
+.title {
+  font-size: 22px;
 }
 
 .buttons {
@@ -106,12 +116,33 @@ h1 {
   background-color: white;
   color: var(--dark-gray);
   border: 1px solid black;
+  font-weight: bolder;
+  transition: all 1s ease;
 }
 
-.btn--white {
+.btn--black:hover {
+  background-color: transparent;
   color: white;
   font-weight: 700;
   border: 1px solid white;
+  letter-spacing: 3px;
+}
+
+.btn--white {
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  border: 1px solid white;
+  letter-spacing: 3px;
+  transition: all 1s ease;
+}
+
+.btn--white:hover {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  border: 1px solid rgb(80, 76, 76);
+  letter-spacing: 3px;
 }
 
 main figure {
@@ -122,63 +153,96 @@ main figure {
 
 main figure img {
   width: 100%;
-  max-width: 400px;
+  max-width: 280px;
   object-fit: cover;
-}
-
-.stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  background-color: white;
-  color: black;
-  min-height: 15vh;
-  justify-content: space-evenly;
-  margin: 0 auto;
-}
-
-.stats article {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.stats article strong {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.stats span {
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--light-gray);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  border-radius: 15em;
 }
 
 .calc {
-  margin: 1em 0;
-  min-height: 30vh;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 100vh;
+  background-color: #2b3137;
+  gap: 1.5em;
 }
 
 .calc article {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  gap: .5em;
+}
+
+.calc select {
+  border: none;
+  min-height: 30px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.calc form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.calc button {
+  display: grid;
+  place-self: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.calc form .input {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.calc form .input input {
+  min-height: 25px;
+  outline: none;
+  padding-left: .5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.who {
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5em;
-  min-width: 100vh;
+  align-items: center;
+  background-color: white;
+  color: black;
 }
 
-.calc article div {
-  margin: 0 auto;
+.who article {
   display: flex;
+  flex-direction: row;
+  min-height: 35vh;
   justify-content: space-evenly;
+  gap: 2em;
+}
+
+.who div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5vh;
+  background-color: white;
+  color: black
 }
