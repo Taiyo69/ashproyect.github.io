@@ -246,3 +246,19 @@ footer {
   background-color: white;
   color: black
 }
+@media screen (min-width: 375px) {
+main {
+  grid-template-areas: "a"
+  "b";
+}
+  main article {
+grid-area: a;
+  }
+  main figure {
+grid-area: b;
+  }
+  .who article {
+flex-direction: column;
+  }
+
+}
